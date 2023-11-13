@@ -1795,7 +1795,7 @@ printf("%d ",a[i][j]);
 printf("\n");
 }
 return 0;
-}*/
+}
 #include<stdio.h>
 int main()
 {
@@ -1804,7 +1804,7 @@ int main()
 	printf("%u\n",a);
 	if(a==-1) printf("=\n");
 	return 0;
-}
+}*/
 
 
 

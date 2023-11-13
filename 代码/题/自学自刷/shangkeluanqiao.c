@@ -77,7 +77,7 @@ int main()
         printf("%d ",a[i]);
     }
     return 0;
-}*/
+}
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -102,9 +102,71 @@ int main(void)
     puts(temp);
     free(temp);
     return 0;
+}*/
+/*
+#include<stdio.h>
+int main()
+{
+    int o,c,h,l;
+    scanf("%d %d %d %d",&o,&c,&h,&l);
+    if(c<o)
+    {
+        if(l<o&&l<c&&h>o&&h<c||l<o&&l<c&&h<o&&h<c||l<o&&l<c&&h<o&&h>c)
+        printf("BW-Soild with Lower Shadow");
+        else if(h>o&&h>c&&l<o&&l>c||h>o&&h>c&&l>o&&l<c||h>o&&h>c&&l>o&&l>c)
+                printf("BW-Soild with Upper Shadow");
+                else if("l<o&&l<c&&h>o&&h>c")
+printf("BW-Soild with Lower Shadow and Upper Shadow");
+else
+printf("BW-Soild");
 }
-
-
+else if(c>o)
+{
+if(l<o&&l<c&&h>o&&h<c||l<o&&l<c&&h<o&&h<c||l<o&&l<c&&h<o&&h>c)
+printf("R-Hollow with Lower Shadow");
+else if(h>o&&h>c&&l<o&&l>c||h>o&&h>c&&l>o&&l<c||h>o&&h>c&&l>o&&l>c)
+printf("R-Hollow with Upper Shadow");
+else if("l<o&&l<c&&h>o&&h>c")
+printf("R-Hollow with Lower Shadow and Upper Shadow");
+else
+printf("R-Hollow");
+}
+else
+{
+if(l<o&&l<c&&h>o&&h<c||l<o&&l<c&&h<o&&h<c||l<o&&l<c&&h<o&&h>c)
+printf("R-Cross with Lower Shadow");
+else if(h>o&&h>c&&l<o&&l>c||h>o&&h>c&&l>o&&l<c||h>o&&h>c&&l>o&&l>c)
+printf("R-Cross with Upper Shadow");
+else if("l<o&&l<c&&h>o&&h>c")
+printf("R-Cross with Lower Shadow and Upper Shadow");
+else
+printf("R-Cross");
+}
+return 0;
+}*/
+/*
+一个采购员去银行兑换一张y元f分的支票，结果出纳员错给了f元y分
+采购员用去了n分之后才发觉有错
+于是清点了余额尚有2y元2f分，问该支票面额是多少？
+#include<stdio.h>
+int main()
+{
+    int y,f,n,a=0;
+    scanf("%d",&n);
+    for(f=0;f<100;f++)
+    {
+        for(y=0;y<100;y++)
+        {
+            if(f*100+y-n==2*y*100+2*f)
+            {
+                a=1;
+                printf("%d.%d\n",y,f);
+            }
+        }
+    }
+    if(a==0) printf("No Solution\n");
+    return 0;
+}*/
 
 
 

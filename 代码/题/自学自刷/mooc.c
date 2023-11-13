@@ -201,8 +201,18 @@ int main(void)
     printf("%zu\t%zu\n", strlen(&str[0] + 1), strlen(arr + 0));
     //printf("%d\n",num2);
     return 0;
+}
+#include<stdio.h>
+int main()
+{
+    //printf("%9d\n", 123);
+    //printf("%-9d\n", 123);//左对齐
+    int num=0;
+    //scanf("%*[^1],%d",&num);
+    //printf("%dty%n\n",12345,&num);
+    printf("%d\n",num);
+    return 0;
 }*/
-
 
 
 

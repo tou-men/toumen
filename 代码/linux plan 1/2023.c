@@ -202,6 +202,7 @@ int main(void) {
     free(filteredNumbers);
     return 0;
 }*/
+/*
 #include<stdio.h>
 #include<stdlib.h>
 typedef int (*Predicate)(int);
@@ -231,8 +232,20 @@ int main(void) {
     printf("\n");
     free(filteredNumbers);//释放malloc的内存
     return 0;
+}*/
+/*
+#include<stdio.h>
+void swap(int a,int b)
+{
+    
 }
-
+int main()
+{
+    int a, b;
+    swap(a,b);
+    printf("%d %d",a,b);
+    return 0;
+}*/
 
 
 
