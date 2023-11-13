@@ -1805,9 +1805,81 @@ int main()
 	if(a==-1) printf("=\n");
 	return 0;
 }*/
-
-
-
+/*
+P2550
+#include<stdio.h>
+int cp(int A[],int B[],int n)
+{
+	int j,k,l=0;
+	for(j=0;j<7;j++)
+	{
+		for(k=0;k<7;k++)
+		{
+			if(A[j]==B[k])
+			{
+				l++;
+			}
+		}
+	}
+	return l;
+}
+int main()
+{
+	int a[1005][7]={0},b[7]={0},c[1005]={0},d[7]={0},i,j,n;
+	scanf("%d",&n);
+	for(i=0;i<7;i++)
+	{
+		scanf("%d",&b[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<7;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		c[i]=cp(a[i],b,n);
+		if(c[i]==0) break;
+		c[i]--;
+		d[c[i]]++;
+	}
+	for(i=6;i>=0;i--)
+	{
+		if(i!=0) printf("%d ",d[i]);
+		else printf("%d",d[i]);
+	}
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a[34]={0},b[8]={0};
+	int i,j,n,q,p,t=0;
+	scanf("%d",&n);
+	for(i=0;i<7;i++)
+	{
+		scanf("%d",&q);
+		a[q]=1;
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<7;j++)
+		{
+		scanf("%d",&p);
+			if(a[p]==1) t++;
+		}
+		b[7-t]++;
+		t=0;
+	}
+	for(i=0;i<7;i++)
+	{
+		if(i!=6) printf("%d ",b[i]);
+		else printf("%d",b[i]);
+	}
+	return 0;
+}*/
 
 
 
