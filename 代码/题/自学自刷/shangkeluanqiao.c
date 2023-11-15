@@ -167,9 +167,63 @@ int main()
     if(a==0) printf("No Solution\n");
     return 0;
 }*/
-
-
-
+/*
+#include<stdio.h>
+int main()
+{
+    int a=0,b=0,c=0;
+    char ch;
+    while((ch=getchar())!='\n')
+    {
+        if(ch>='0'&&ch<='9') a++;
+        else if(ch==' ') b++;
+        else if(ch>='A'&&ch<='z') c++;
+    }
+    printf("%d %d %d\n",a,b,c);
+    return 0;
+}*/
+/*
+#include<stdio.h>
+main()
+{
+int n;
+int h,w;
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+{
+scanf("%d %d",&h,&w);
+double m=(h-100)*0.9*2;
+if(w>0.9*m&&w<1.1*m)
+{printf("You are wan mei!\n");}
+else if(w>=1.1*m)
+{printf("You are tai pang le!\n");}
+else
+{printf("You are tai shou le!\n");}
+}
+return 0;
+}*/
+/*
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    double c,b,d=0;
+    int a,n,i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d%lf",&a,&b);
+        c=(a-100)*0.9*2;
+        d=sqrt(pow(c-b,2));
+        //d=mac(c-b);
+        //if(c>b) d=c-b;
+        //else d=b-c;
+        if(d<0.1*c) printf("You are wan mei!\n");
+        else if(c>b) printf("You are tai shou le!\n");
+        else printf("You are tai pang le!\n");
+    }
+    return 0;
+}*/
 
 
 

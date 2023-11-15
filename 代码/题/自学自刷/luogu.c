@@ -1880,7 +1880,93 @@ int main()
 	}
 	return 0;
 }*/
-
+/*P1614*/
+/*
+#include<stdio.h>
+int main()
+{
+	int a[3000]={0},b[3000]={0},x,i,j,m,n;
+	scanf("%d%d",&n,&m);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<=n-m;i++)
+	{
+		for(j=i;j<i+m;j++)
+		{
+			b[i]+=a[j];
+		}
+	}
+	int min=b[0];
+	for(i=0;b[i]!=0;i++)
+	{
+		if(min>b[i]&&b[i]!=0) min=b[i];
+	}
+	printf("%d\n",min);
+	return 0;
+}*/
+/*
+P5731
+#include<stdio.h>
+int main()
+{
+	int n,i,j;
+	scanf("%d",&n);
+	for(i=1;i<=n*n;i++)
+	{
+		for(j=i;j<i+n;j++)
+		{
+			printf("% 3d",j);
+		}
+		i=j-1;
+		printf("\n");
+	}
+	return 0;
+}*/
+/*
+void search(int A[],int B,int N)
+{
+	int a=N/2,i;
+	while()
+}*/
+#include<stdio.h>
+int main()
+{
+	int a[1000001]={0},n,i,m,b;
+	scanf("%d%d",&n,&m);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	int l=0,r=n-1,s;
+	int M=(l+r)/2;
+	for(i=1;i<=m;i++)
+	{
+		scanf("%d",&b);
+		s=-1;
+		while(a[r]>a[l])
+		{
+			if(a[M]>b)
+			{
+				r=M;
+				M=(r+l)/2;
+			}
+			else if(a[M]<b)
+			{
+				l=M;
+				M=(r+l)/2;
+			}
+			else if(a[M]==b)
+			{
+				s=i;
+				break;
+			}
+		}
+		printf("%d ",s);
+	}
+	return 0;
+}
 
 
 
