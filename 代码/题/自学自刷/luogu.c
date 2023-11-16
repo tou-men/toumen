@@ -1930,47 +1930,150 @@ void search(int A[],int B,int N)
 	int a=N/2,i;
 	while()
 }*/
+/*P2249
 #include<stdio.h>
 int main()
 {
 	int a[1000001]={0},n,i,m,b;
 	scanf("%d%d",&n,&m);
-	for(i=0;i<n;i++)
+	for(i=1;i<=n;i++)
 	{
 		scanf("%d",&a[i]);
+
 	}
-	int l=0,r=n-1,s;
+	int l=1,r=n,s;
 	int M=(l+r)/2;
 	for(i=1;i<=m;i++)
 	{
 		scanf("%d",&b);
 		s=-1;
-		while(a[r]>a[l])
+		while(r>l)
 		{
-			if(a[M]>b)
+			if(a[M]<b)
+			{
+				l=M+1;
+				M=(r+l)/2;
+			}
+			else if(a[M]>=b)
 			{
 				r=M;
 				M=(r+l)/2;
 			}
-			else if(a[M]<b)
+			if(a[l]==b)
 			{
-				l=M;
-				M=(r+l)/2;
-			}
-			else if(a[M]==b)
-			{
-				s=i;
+				s=l;
 				break;
 			}
 		}
 		printf("%d ",s);
+		l=1,r=n;
 	}
 	return 0;
+}*/
+/*P5737
+#include<stdio.h>
+int main()
+{
+	int a,i,b,c[500]={0},n=0;
+	scanf("%d%d",&a,&b);
+	for(i=a;i<=b;i++)
+	{
+		if((i%100!=0&&i%4==0)||i%400==0)
+		{
+			c[n]=i;
+			n++;
+		}
+	}
+	printf("%d\n",n);
+	for(i=0;i<n;i++)
+	{
+		if(i!=n-1) printf("%d ",c[i]);
+		else printf("%d\n",c[i]);
+	}
+	return 0;
+}*/
+/*P5736
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i,n,a,j,b[100],s=1,x=0;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a);
+		if(a==1) continue;
+		for(j=2;j<=sqrt(a);j++)
+		{
+			if(a%j==0)
+			{
+				s=-1;
+				break;
+			}
+		}
+		if(s==1)
+		{
+			b[x]=a;
+			x++;
+		} else s=1;
+	}
+	for(i=0;i<x;i++)
+	{
+		if(i!=x-1) printf("%d ",b[i]);
+		else printf("%d\n",b[i]);
+	}
+	return 0;
+}*/
+/*P5738
+#include<stdio.h>
+int main()
+{
+	int m,n,i,j,a[105]={0},b[25]={0},max,min,x=0;
+	double c[100]={0.0},MAX;
+	scanf("%d%d",&n,&m);
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			scanf("%d",&b[j]);
+			x+=b[j];
+		}
+		max=b[0];
+		min=b[0];
+		for(j=1;j<m;j++)
+		{
+			if(b[j]>max) max=b[j];
+			if(b[j]<min) min=b[j];
+		}
+		x=x-max-min;
+		c[i]=x*1.0/(m-2);
+		x=0;
+	}
+	MAX=c[0];
+	for(i=1;i<n;i++)
+	{
+		if(MAX<c[i]) MAX=c[i];
+	}
+	printf("%.2lf\n",MAX);
+	return 0;
+}*/
+/*p5739
+#include<stdio.h>
+int P(int n)
+{
+	if(n!=1)
+	{
+		return n*P(n-1);
+	}
 }
-
-
-
-
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int x=P(n);
+	printf("%d\n",x);
+	return 0;
+}*/
 
 
 
