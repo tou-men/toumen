@@ -2074,6 +2074,197 @@ int main()
 	printf("%d\n",x);
 	return 0;
 }*/
+/*P5743
+#include<stdio.h>
+int main()
+{
+	int n,sum=1;
+	scanf("%d",&n);
+	n--;
+	while(n--)
+	{
+		sum=(sum+1)*2;
+	}
+	printf("%d\n",sum);
+	return 0;
+}*/
+/*P5744
+#include<stdio.h>
+struct XUE
+{
+	char a[20];
+	int b;
+	int c;
+};
+int main()
+{
+	int n,i;
+	scanf("%d",&n);
+	struct XUE student[5];
+	for(i=0;i<n;i++)
+	{
+		scanf("%s%d%d",student[i].a,&student[i].b,&student[i].c);
+		student[i].b++;
+		student[i].c*=1.2;
+		if(student[i].c>600) student[i].c=600;
+	}
+	for(i=0;i<n;i++) printf("%s %d %d\n",student[i].a,student[i].b,student[i].c);
+	return 0;
+}*/
+/*P5742
+#include<stdio.h>
+int fan(int a,int b);
+struct st
+{
+	int x;
+	int a;
+	int b;
+	//char c[20]
+	//int (*fan)(int a,int b);
+	//int c=fan(a,b);
+};
+// int fan(int a,int b)
+// {
+// 	a*=100;
+// 	b*=100;
+// 	int c=a*0.7+b*0.3;
+// 	return c;
+// }
+void X(int a,int b)
+{
+	a*=10;
+	b*=10;
+	int c=a+b;
+	int d=a*0.7+b*0.3;
+	if(d>=800&&c>1400) printf("Excellent\n");
+	else printf("Not excellent\n");
+}
+int main()
+{
+	struct st ST[1005];
+	int n,i;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d%d%d",&ST[i].x,&ST[i].a,&ST[i].b);
+	}
+	for(i=0;i<n;i++)
+	{
+		X(ST[i].a,ST[i].b);
+	}
+	return 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
