@@ -2154,9 +2154,65 @@ int main()
 	}
 	return 0;
 }*/
-
-
-
+/*#include<stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	if(n*5<11+n*3) printf("Local\n");
+	else printf("Luogu\n");
+	return 0;
+}*/
+/*P5711
+#include<stdio.h>
+int main()
+{
+	int a;
+	scanf("%d",&a);
+	if(a%400==0||(a%100!=0&&a%4==0)) printf("1\n");
+	else printf("0\n");
+	return 0;
+}*/
+/*P5726
+#include<stdio.h>
+int main()
+{
+	int i,n,a[1005],sum=0;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+		sum+=a[i];
+	}
+	int max=a[0],min=a[0];
+	for(i=0;i<n;i++)
+	{
+		if(max<a[i]) max=a[i];
+		if(min>a[i]) min=a[i];
+	}
+	sum=sum-max-min;
+	double x=sum*1.0/(n-2);
+	printf("%.2lf\n",x);
+	return 0;
+}*/
+/*P1046
+#include<stdio.h>
+int main()
+{
+	int i,a[10],x;
+	for(i=0;i<10;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	scanf("%d",&x);
+	int sum=0;
+	for(i=0;i<10;i++)
+	{
+		if(x+30>=a[i]) sum++;
+	}
+	printf("%d\n",sum);
+	return 0;
+}*/
 
 
 
