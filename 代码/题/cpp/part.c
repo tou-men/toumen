@@ -494,6 +494,38 @@ int main()
 }
 */
 //第九章------------------------------------------------------------------------------------------------------
+/*
+#include<stdio.h>
+void up_and_down(int);
+int main()
+{
+    up_and_down(1);
+    return 0;
+}
+void up_and_down(int n)
+{
+    printf("Level %d: n location %p\n",n,&n);
+    if(n<4) up_and_down(n+1);
+    printf("LEVEL %d: n location %p\n",n,&n);
+}
+#include<stdio.h>
+void put(unsigned long n);
+int main()
+{
+    unsigned long n;
+    scanf("%lu",&n);
+    put(n);
+}
+void put(unsigned long n)
+{
+    int r;
+    r=n%2;
+    if(n>=2) put(n/2);
+    putchar(r==0 ? '0' : '1');
+}*/
+
+
+
 
 
 

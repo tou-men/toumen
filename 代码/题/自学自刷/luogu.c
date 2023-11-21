@@ -2213,9 +2213,36 @@ int main()
 	printf("%d\n",sum);
 	return 0;
 }*/
+/*P5717*/
+#include<stdio.h>
+#include<math.h>
+void shi(int a,int b,int c)
+{
+	if(a+b>c||a+c>b||a+c>b);
+	else
+	{
+		printf("Not triangle\n");
+		return 0;
+	}
+}
+void zhi(int a,int b,int c)
+{
+	int x,y,z;
+	x=pow(a,2)+pow(b,2)==pow(c,2);
+	y=pow(a,2)+pow(c,2)==pow(b,2);
+	z=pow(c,2)+pow(b,2)==pow(a,2);
+	if(x||y||z) printf("Right triangle\n");
+}
 
-
-
+int main()
+{
+	int a[3],i;
+	for(i=0;i<3;i++) scanf("%d",&a[i]);
+	switch(i)
+	{
+		case 1:
+	}
+}
 
 
 
