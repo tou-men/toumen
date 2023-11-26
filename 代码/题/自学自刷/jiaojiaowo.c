@@ -264,7 +264,23 @@ void sort( int a[], int n )
         }
     }
 }*/
-
+/*
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    int a[1000];
+    scanf("%d%d",&n,&a[0]);
+    int min=a[0],max=a[0];
+    for(i=1;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        if(min>a[i]) min=a[i];
+        if(max<a[i]) max=a[i];
+    }
+    printf("%d",max-min);
+    return 0;
+}*/
 
 
 
