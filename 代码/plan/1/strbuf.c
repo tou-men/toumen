@@ -6,10 +6,11 @@ struct strbuf
     int alloc;   //当前缓冲区（字符串）容量
     char *buf;   //缓冲区（字符串）
 };
-void strbuf_init(struct strbuf *sb, size_t alloc);
-void strbuf_attach(struct strbuf *sb, void *str, size_t len, size_t alloc);
-void strbuf_release(struct strbuf *sb);
-void strbuf_swap(struct strbuf *a, struct strbuf *b);
+void strbuf_init(struct strbuf *sb, size_t alloc);//
+void strbuf_attach(struct strbuf *sb, void *str, size_t len, size_t alloc);//
+void strbuf_release(struct strbuf *sb);//
+void strbuf_swap(struct strbuf *a, struct strbuf *b);//
+char *strbuf_detach(struct strbuf *sb, size_t *sz);
 int main()
 {
     struct strbuf sb;
@@ -37,11 +38,11 @@ void strbuf_release(struct strbuf *sb)
 }
 void strbuf_swap(struct strbuf *a, struct strbuf *b)
 {
-    int t=a->alloc;
-    a->alloc=b->alloc;
-    b->alloc=t;
-    t=a->len;
-    a->len=b->len;
-    b->len=t;
+    struct strbuf swap=*a;
+    *a=*b;
+    *b=swap;
+}
+char *strbuf_detach(struct strbuf *sb, size_t *sz)
+{
     
 }
