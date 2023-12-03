@@ -11,6 +11,8 @@ void strbuf_attach(struct strbuf *sb, void *str, size_t len, size_t alloc);//
 void strbuf_release(struct strbuf *sb);//
 void strbuf_swap(struct strbuf *a, struct strbuf *b);//
 char *strbuf_detach(struct strbuf *sb, size_t *sz);
+int strbuf_cmp(const struct strbuf *first, const struct strbuf *second);//
+void strbuf_reset(struct strbuf *sb);//
 int main()
 {
     struct strbuf sb;
@@ -45,4 +47,13 @@ void strbuf_swap(struct strbuf *a, struct strbuf *b)
 char *strbuf_detach(struct strbuf *sb, size_t *sz)
 {
     
+}
+int strbuf_cmp(const struct strbuf *first, const struct strbuf *second)
+{
+    if(first->alloc==second->alloc) return 1;
+    else return 0;
+}
+void strbuf_reset(struct strbuf *sb)
+{
+    for(int i=0;i<sb->len;i++) sb->buf[i]='\0';
 }
