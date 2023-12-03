@@ -46,7 +46,10 @@ void strbuf_swap(struct strbuf *a, struct strbuf *b)
 }
 char *strbuf_detach(struct strbuf *sb, size_t *sz)
 {
-    
+    struct strbuf *re;
+    *re=*sb;
+    *sz=sb->alloc;
+    free(sb);
 }
 int strbuf_cmp(const struct strbuf *first, const struct strbuf *second)
 {
