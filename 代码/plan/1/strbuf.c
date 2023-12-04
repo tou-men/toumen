@@ -17,6 +17,10 @@ int strbuf_cmp(const struct strbuf *first, const struct strbuf *second);//
 void strbuf_reset(struct strbuf *sb);//
 void strbuf_grow(struct strbuf *sb, size_t extra);//
 void strbuf_add(struct strbuf *sb, const void *data, size_t len);//----
+void strbuf_addch(struct strbuf *sb, int c);//
+void strbuf_addstr(struct strbuf *sb, const char *s);//
+void strbuf_addbuf(struct strbuf *sb, const struct strbuf *sb2);//
+void strbuf_setlen(struct strbuf *sb, size_t len);//
 int main()
 {
     struct strbuf sb;
@@ -29,7 +33,7 @@ int main()
 }
 void strbuf_init(struct strbuf *sb, size_t alloc)
 {
-    sb=(char *)malloc(sizeof(int)*2+sizeof(char)*alloc);
+    sb->buf=(char *)malloc(sizeof(char)*alloc);
     sb->alloc=alloc;
 }
 void strbuf_attach(struct strbuf *sb, void *str, size_t len, size_t alloc)
@@ -40,7 +44,7 @@ void strbuf_attach(struct strbuf *sb, void *str, size_t len, size_t alloc)
 }
 void strbuf_release(struct strbuf *sb)
 {
-    free(sb);
+    free(sb->buf);
 }
 void strbuf_swap(struct strbuf *a, struct strbuf *b)
 {
@@ -73,4 +77,37 @@ void strbuf_add(struct strbuf *sb, const void *data, size_t len)
 {
     strbuf_grow(sb,len+1);
     for(int i=0;i<len;i++) sb->buf[len+i]=&data[i];
+}
+void strbuf_addch(struct strbuf *sb, int c)
+{
+    sb->buf=(char *)realloc(sb->buf,(sb->len+1)*sizeof(char));
+    sb->alloc++;
+    sb->len++;
+    strcat(sb->buf,c);
+}
+void strbuf_addstr(struct strbuf *sb, const char *s)
+{
+    strbuf_grow(sb,strlen(s));
+    strcat(sb->buf,s);
+    sb->alloc+=strlen(s);
+    sb->len+=strlen(s);
+}
+void strbuf_addbuf(struct strbuf *sb, const struct strbuf *sb2)
+{
+    sb->alloc+=sb2->alloc;
+    sb->len+=sb2->len;
+    strcat(sb->buf,sb2->buf);
+}
+void strbuf_setlen(struct strbuf *sb, size_t len)
+{
+    if(len>sb->len)
+    {
+        sb->buf=(char*)realloc(sb->buf,len);
+        sb->alloc=len;
+        sb->len=len;
+    } else
+        {
+            sb->len=len;
+            sb->buf[len]='\0';
+        }
 }
