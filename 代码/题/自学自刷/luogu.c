@@ -2214,6 +2214,7 @@ int main()
 	return 0;
 }*/
 /*P5717*/
+/*
 #include<stdio.h>
 #include<math.h>
 void shi(int a,int b,int c)
@@ -2242,8 +2243,46 @@ int main()
 	{
 		case 1:
 	}
-}
-
+}*/
+/*P4414
+#include<stdio.h>
+int main()
+{
+	int a[3],i,j;
+	scanf("%d%d%d\n",&a[0],&a[1],&a[2]);
+	for(i=0;i<3;i++)
+	{
+		for(j=i+1;j<3;j++)
+		{
+			if(a[j]<a[i])
+			{
+				int t=a[i];
+				a[i]=a[j];
+				a[j]=t;
+			}
+		}
+	}
+	int A=a[0],B=a[1],C=a[2];
+	char c[3];
+	scanf("%c%c%c",&c[0],&c[1],&c[2]);
+	for(i=0;i<3;i++)
+	{
+		switch(c[i])
+		{
+			case 'A':
+				printf("%d",A);
+				break;
+			case 'B':
+				printf("%d",B);
+				break;
+			case 'C':
+				printf("%d",C);
+				break;
+		}
+		if(i!=2) printf(" ");
+	}
+	return 0;
+}*/
 
 
 
