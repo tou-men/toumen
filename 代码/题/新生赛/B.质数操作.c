@@ -28,7 +28,7 @@ int f_(int a)
 }
 int g_(int a)
 {
-    if(a==1) return -1;
+    if(a<=1) return -1;
     //if(a==2) return 1;
     int flag=1;
     for(int i=2;i<=sqrt(a);i++)
