@@ -332,7 +332,24 @@ int sum(int a)
     if(a!=0) return a+sum(a-1);
     else return a;
 }*/
-
+#include<stdio.h>
+int main()
+{
+    int n;
+    int sum[2]={0,1};
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            sum[1]*=j;
+        }
+        sum[0]+=sum[1];
+        sum[1]=1;
+    }
+    printf("%d\n",sum[0]);
+    return 0;
+}
 
 
 
