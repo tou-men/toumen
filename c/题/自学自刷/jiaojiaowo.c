@@ -331,7 +331,7 @@ int sum(int a)
 {
     if(a!=0) return a+sum(a-1);
     else return a;
-}*/
+}
 #include<stdio.h>
 int main()
 {
@@ -349,7 +349,8 @@ int main()
     }
     printf("%d\n",sum[0]);
     return 0;
-}
+}*/
+
 
 
 
