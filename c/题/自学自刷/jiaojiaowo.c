@@ -350,21 +350,22 @@ int main()
     printf("%d\n",sum[0]);
     return 0;
 }*/
+/*
+#include <stdio.h>   
+int* ptr_to_int(int* ptr) 
+{
+	int num = *ptr;
+	printf("The original value is %d\n", num);
+	num *= 2;
+	printf("The new value is %d\n", num);
+	return ptr;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+int main() {
+	int num = 10;
+	int* ptr = &num;
+	printf("The original value is %d\n", num);
+	num = *ptr_to_int(ptr);
+	printf("The new value is %d\n", num);
+	return 0;
+}*/
