@@ -369,3 +369,9 @@ int main() {
 	printf("The new value is %d\n", num);
 	return 0;
 }*/
+#include<stdio.h>
+int main()
+{
+	printf("xiaoxueshengdadaima   duowenlilaoshi\n");
+	return 0;
+}
