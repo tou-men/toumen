@@ -35,3 +35,56 @@ int search( int list[], int n, int x )
     if(flag==1) return -1;
     if(flag==-1) return N;
 }*/
+/*
+void strmcpy( char *t, int m, char *s )
+{
+    for(t+=m-1;*t!='\0';t++)
+    {
+        *s=*t;
+        s++;
+    }
+    *s='\0';
+}*/
+/*
+bool palindrome( char *s )
+{
+    int len=strlen(s);
+    int count=0;
+    char *a=strlen(s)-1+s;
+    if(len%2==0)
+    {
+        for(int i=0;i<len/2;i++)
+        {
+            if(*s==*a)
+            {
+                count++;
+            }
+            s++;
+            a--;
+        }
+        if(count==len/2) return 1;
+        else return 0;
+    } else 
+    {
+        for(int i=0;i<len/2;i++)
+        {
+            if(*s==*a) count++;
+            s++;
+            a--;
+        }
+        if(count==len/2) return 1;
+        else return 0;
+    }
+}*/
+/*
+int getindex( char *s )
+{
+    if(strncmp(s,"Sunday",strlen(s))==0) return 0;
+    else if(strncmp(s,"Monday",strlen(s))==0) return 1;
+    else if(strncmp(s,"Tuesday",strlen(s))==0) return 2;
+    else if(strncmp(s,"Wednesday",strlen(s))==0) return 3;
+    else if(strncmp(s,"Thursday",strlen(s))==0) return 4;
+    else if(strncmp(s,"Friday",strlen(s))==0) return 5;
+    else if(strncmp(s,"Saturday",strlen(s))==0) return 6;
+    else return -1;
+}*///----------------------------------------------------------------
