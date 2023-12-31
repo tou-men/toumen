@@ -98,3 +98,17 @@ int max_len( char *s[], int n )
     }
     return max;
 }*/
+/*
+char *match( char *s, char ch1, char ch2 )
+{
+	while(*s!='\0'){        
+		if(*s==ch1){        
+			for(char *s1=s;*s1!='\0';s1++){
+				printf("%c",*s1);
+				if(*s1==ch2)break;
+			}printf("\n");
+			return s;
+		}s++;
+	}printf("\n");
+	return s;
+}*/
