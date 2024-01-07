@@ -36,3 +36,39 @@ int main()
     printf("%d",i);
     return 0;
 }*///------------------------------------------------------------
+/*
+#include <stdio.h>
+int main()
+{
+    int t,n,i,j,x;
+	
+    scanf("%d",&t);
+    
+    for(x=0;x<t;x++)
+    {
+        int f=0;
+        scanf("%d",&n);
+        int a[16][16];
+        for(i=0;i<n;i++)
+        {
+            for(j=0;j<n;j++) scanf("%d",&a[i][j]);
+        }
+
+        for(i=0;i<n;i++)
+        {
+            for(j=0;j<i;j++)
+            {
+                if(a[i][j]!=0)
+				{
+					
+					f=1;
+                    break;
+                }
+            }
+        }
+        if(f==1) printf("NO\n");
+        if(f==0) printf("YES\n");
+    }
+    return 0;
+}
+*///------------------------------------------------------------------------------------
