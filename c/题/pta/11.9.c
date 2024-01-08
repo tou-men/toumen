@@ -72,3 +72,48 @@ int main()
     return 0;
 }
 *///------------------------------------------------------------------------------------
+/*
+#include <stdio.h>
+#define LEN 6
+int main()
+{
+    int a[LEN][LEN];
+ 
+    int n;
+    scanf("%d", &n);
+ 
+    for(int i = 0; i < n; i++)
+    {
+            for(int j = 0; j < n; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+ 
+    int maxIndex, i, j, row;
+    for(i = 0; i < n; i++)
+    {
+        maxIndex = 0;
+        for(j = 1; j < n; j++)
+        {
+            if(a[i][maxIndex] <= a[i][j]) maxIndex = j;
+        }
+        for(row = 0; row < n; row++)
+        {
+            if(a[row][maxIndex] < a[i][maxIndex]) break;
+        }
+        if(row == n)
+        {
+            printf("%d %d", i, maxIndex);
+            break;
+        }
+    }
+    if(i == n)
+    {
+        printf("NONE");
+    }
+ 
+    return 0;
+}
+ 
+ *///-------------------------------------------------------------------------------
