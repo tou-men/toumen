@@ -137,3 +137,43 @@ int main(){
 		printf("%s\n",s[i]);
 	return 0;
 } *///------------------------------------------------------------------------------
+/*
+#include<stdio.h>
+void swap(int *a,int *b)
+{
+    int t;
+    t=*a;
+    *a=*b;
+    *b=t;
+}
+int main()
+{
+    int i,N,a[15];
+    scanf("%d",&N);
+    for(i=0;i<N;i++)
+    {
+       scanf("%d",&a[i]); 
+    }
+    int min=a[0],max=a[0],MAX=0,MIN=0;
+    for(i=0;i<N;i++)
+    {
+        if(a[i]<=min)
+        {
+            min=a[i];
+            MIN=i;
+        }
+        if(max<=a[i])
+        {
+            max=a[i];
+            MAX=i;
+        }
+    }
+    swap(&a[0],&a[MIN]);
+    if(MAX==0) MAX=MIN;
+    swap(&a[N-1],&a[MAX]);
+    for(i=0;i<N;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    return 0;
+}*/
