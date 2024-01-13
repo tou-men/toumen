@@ -10,3 +10,13 @@ int getindex( char *s )
     else if(strncmp(s,"Saturday",strlen(s))==0) return 6;
     else return -1;
 }*///-------------------------------------------------------------------------
+/*
+int max_len( char *s[], int n )
+{
+    int i,len=strlen(s[0]);
+    for(i=1;i<n;i++)
+    {
+        if(strlen(s[i])>len) len=strlen(s[i]);
+    }
+    return len;
+}*///------------------------------------------------------------------------------
