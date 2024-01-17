@@ -62,3 +62,26 @@ char *search( char *s, char *t )
     }
     return NULL;
 }*///------------------------------------------------------------------------------------
+/*
+#include<stdio.h>
+int main()
+{
+    int N,a;
+    int i;
+    double sum;
+    scanf("%d",&N);
+    scanf("%d",&a);
+    int min=a;
+    int max=a;
+    sum=a;
+    for(i=1;i<N;i++)
+    {
+        scanf("%d",&a);
+        sum+=(a);
+        if(a>max) max=a;
+        if(a<min) min=a;
+    }
+    double x=sum*1.0/N;
+    printf("average = %.2lf\nmax = %d.00\nmin = %d.00\n",x,max,min);
+    return 0;
+}*///-----------------------------------------------------------------------------
